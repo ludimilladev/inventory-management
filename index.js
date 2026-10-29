@@ -1,6 +1,7 @@
 const express = require("express");
 const connect = require("./db");
 const productRoutes = require("./routes/productRoutes");
+const errorHandler = require("./middlewares/erroHandler");
 
 const app = express()
 app.use(express.json());
@@ -12,6 +13,12 @@ app.get("/", (req, res) => {
 });
 
 app.use("/products", productRoutes);
+
+app.use((req,res) => {
+    res.status(404).json({message: "Route not found"})
+})
+
+app.use(errorHandler)
 
 const PORT = 3000;
 app.listen(PORT, () => {
