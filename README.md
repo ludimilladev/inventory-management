@@ -6,6 +6,8 @@ A REST API for managing product inventory, built with Node.js, Express and Mongo
 
 - Create, list, update and delete products (CRUD)
 - Data validation with Mongoose schemas
+- Centralized error handling with a custom middleware
+- Code organized in routes, controllers and models
 - Environment variables for configuration
 
 ## Tech Stack
@@ -85,6 +87,34 @@ The API will be running at `http://localhost:3000`.
 
 ## Roadmap
 
+### Done
+
+- [x] Product CRUD with Express and MongoDB
 - [x] Organize the code into routes, controllers and models
-- [x] Improve validation and error handling
-- [ ] Stock movements (entries and exits)
+- [x] Validation rules and centralized error handling
+
+### Core features
+
+- [ ] Stock movements (entries and exits) with a movement history
+- [ ] Prevent negative stock on exits
+- [ ] Extra product fields: SKU, category, minimum stock and timestamps
+- [ ] Store prices in cents (integers) to avoid rounding errors
+- [ ] Low stock report endpoint
+
+### Security
+
+- [ ] User registration and login with JWT authentication
+- [ ] Protected routes
+- [ ] Basic hardening (helmet, CORS and rate limiting)
+
+### Quality
+
+- [ ] Pagination, filters and search on product listing
+- [ ] Automated tests with Jest and Supertest
+- [ ] API documentation with Swagger
+- [ ] CI with GitHub Actions
+
+### Deployment
+
+- [ ] Docker and docker-compose (API and MongoDB together)
+- [ ] Deploy with MongoDB Atlas and a live API link in this README
