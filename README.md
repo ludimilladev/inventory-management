@@ -86,5 +86,5 @@ The API will be running at `http://localhost:3000`.
 ## Roadmap
 
 - [x] Organize the code into routes, controllers and models
-- [ ] Improve validation and error handling
+- [x] Improve validation and error handling
 - [ ] Stock movements (entries and exits)
